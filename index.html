@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./assets/icon/favicon.png" type="image/x-icon">
+  <title>Ninja Gamer</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="./assets/img/logo.png" alt="logo">
+    </div>
+
+    <h1>Ninja Gamer</h1>
+
+    <nav>
+      <ul class="nav_desktop">
+       <li><a href="#">Computadores</a></li>
+       <li><a href="#">Accesorios</a></li>
+       <li><a href="#">Ofertas</a></li>
+     </ul>
+    </nav>
+
+    <div class="bar_mobile">
+     <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="carrito">
+      <i class="fa-solid fa-cart-shopping fa-xl"></i>
+    </div>
+
+  </header>
+
+
+  <div class="busqueda">
+    <select id="filtro" name="filro">
+      <option value="precio">Precio</option>
+      <option value="recomendados">Recomendados</option>
+      <option value="nuevo">Más Nuevos</option>
+    </select>
+  </div>
+
+  <main>
+
+    <div class="card">
+      <div class="img-producto">
+        <img src="./assets/img/pcgamer_cuadrado.png" alt="pc gamer">
+      </div>
+
+      <div class="info-producto">
+       <h2>PC Gamer AMD Ryzen 7 5700G, Radeon Vega 8, RAM 16GB, SSD 1TB NVMe, Fuente 650W Bronze, FreeDos.</h2>
+       <p class="peso">$ <span class="precio-inicial"></span></p>
+       <p>Cantidad:
+         <button class="botonmas">+</button>
+         <span class="cantidad">1</span>
+         <button class="botonmenos">-</button>
+       </p>
+       <p>Total a pagar: $ <span class="valor-total"></span> </p>
+       <button class="boton_carrito">Añadir Al Carrito</button>
+       <img class="pagos" src="./assets/img/mediodepago.jpg" alt="medios de pago">
+     </div>
+   </div>
+
+  </main>
+
+<footer>
+  <div class="iconos">
+    <i class="fa-brands fa-facebook"></i>
+    <i class="fa-brands fa-instagram"></i>
+  </div>
+  <p> &copy;2024 Ninja Gamer </p>
+</footer>
+<script src="./assets/js/script.js"></script>
+
+</body>
+</html>

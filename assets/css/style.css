@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+  "header"
+  "filter"
+  "main"
+  "footer";
+  grid-template-columns: 100%;
+  grid-template-rows: 80px 60px calc(100vh - 80px - 60px - 60px) 60px;
+  height: 100vh;
+  background-color: hsl(254, 100%, 5%);
+}
+
+header {
+  grid-area: header;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.logo{
+ width: auto;
+ max-width: 20%;
+}
+
+
+.logo >img{
+  width: 100%;
+  height: auto;
+  max-width: 150px;
+  object-fit: contain;
+}
+
+h1 {
+  font-size: 1.5rem;
+  width: 60%;
+
+}
+
+nav, .carrito{
+  display: none;
+}
+
+
+.bar_mobile{
+  display: flex;
+  justify-content: end;
+  gap: 20px;
+  color: hsl(180, 92%, 51%);
+  width: 20% ;
+}
+
+.busqueda {
+  grid-area: filter;
+  background-color: hsl(180, 100%, 34%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+#filtro {
+  width: 80%;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+}
+
+main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: start;
+  align-items: center;
+  overflow: scroll;
+  width: 100%;
+  padding: 20px;
+}
+
+.card{
+  border: 1px solid #bebebe;
+  border-radius: 5px;
+  box-shadow: 0px 0px 30px 7px rgba(3, 222, 230, 0.692);
+  background-color: #ffffff;
+}
+.img-producto, .info-producto{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.img-producto > img{
+  width: 100%;
+  height: auto;
+}
+
+.precio-inicial, .peso{
+  color: hsl(180, 51%, 30%);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.cantidad {
+  border: #000000 1px solid;
+  padding: 1rem;
+}
+
+.botonmas, .botonmenos {
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1rem;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.valor-total{
+  font-size: 1.5rem;
+  color:hsl(180, 51%, 30%)
+}
+
+.boton_carrito{
+  background-color:  hsl(180, 100%, 34%);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  border-radius: 5px;
+}
+
+button :hover{
+  background-color: hsl(180, 73%, 35%);
+}
+
+.pagos {
+  width: 70%;
+}
+
+footer {
+  grid-area: footer;
+  background-color: hsl(180, 100%, 34%);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  font-size: 0.8rem;
+}
+
+footer > .iconos{
+  display: flex;
+  gap: 0.5rem;
+}
+
+
+/* versión tablet */
+
+@media (min-width: 576px){
+
+  body {
+  grid-template-rows: 100px 50px calc(100vh - 100px - 50px - 100px)100px;
+  }
+
+  header {
+    align-items: center;
+    padding: 2rem;
+    gap: 1rem;
+  }
+
+  nav{
+    display:flex;
+  }
+
+  .bar_mobile{
+    display:none;
+  }
+
+  .nav_desktop {
+    list-style-type: none;
+    display: flex;
+    gap:1rem;
+  }
+
+  .nav_desktop > li, a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+
+  .nav_desktop > li a:hover{
+    color: hsl(180, 92%, 51%);
+    cursor: pointer;
+  }
+
+  .carrito{
+    display: flex;
+    color: hsl(180, 100%, 34%);
+    margin-left: auto;
+  }
+
+  .card{
+    width: 80%;
+  }
+
+  h2{
+    font-size: 1.5rem;
+    text-align: left;
+    padding: 0 2rem;
+  }
+
+  .descripcion{
+    text-align: justify;
+    padding: 0 3rem;
+  }
+
+  button {
+    font-size: 0.8rem;
+  }
+}
+
+/* versión desktop */
+@media (min-width: 1140px){
+
+  main{
+    justify-content: center;
+  }
+  .card{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    padding: 4rem;
+  }
+
+  .info-producto{
+    width: 50%;
+  }
+
+  .img-producto >img{
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .agregar{
+    width: 90%;
+  }
+
+}
+
+/* versión pantalla grande*/
+@media (min-width: 1700px){
+
+  header {
+    justify-content: start;
+    padding: 0 2rem;
+    gap: 1.5rem;
+  }
+
+  .logo, h1, .nav_desktop {
+    width: auto;
+  }
+
+  .logo > img {
+    max-width: 80px;
+  }
+
+  .nav_desktop {
+    display: flex;
+    gap: 1rem;
+  }
+
+ h1 {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  #filtro{
+    width: 50%;
+  }
+}
