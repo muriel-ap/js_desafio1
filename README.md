@@ -6,8 +6,8 @@ Este proyecto consiste en **hacer funcionales los botones** de una tarjeta de pr
 
 ## 📝 Descripción del Desafío
 - Implementar lógica en `script.js` para los botones de una **card** de tipo producto de una tienda online.
-- Hacer que la cantidad peda ser seleccionada y el total se actualice automáticamente.
-- Desafío realizado en colaboración con **Ignacio Cifuentes**.
+- Hacer que la cantidad pueda ser seleccionada y el total se actualice automáticamente.
+- Desafío realizado en colaboración con **Ignacio Cifuentes** >> https://github.com/LuisCifuentesP.
 
 ---
 
